@@ -1,0 +1,21 @@
+<div>
+  
+
+  //开始循环输出英雄
+  <ul class='heroes'> 
+    <li class="bandge" *ngFor='let hero of heroes' (click)='onSelect(hero)' [class.selected]='hero===selectedHero' >
+      <span>{{hero.id}}</span>
+      <span>{{hero.name}}</span>
+    </li>
+  </ul>
+
+  <div *ngIf="hero">
+
+      <h2>{{hero.name|uppercase}}Details</h2>
+       <div><span>id:</span> {{hero.id}}</div> 
+      <label >双向绑定：name:
+          <input type="text" [(ngModel)] = 'hero.name' placeholder="str">
+        </label>
+      </div>
+ 
+</div>
