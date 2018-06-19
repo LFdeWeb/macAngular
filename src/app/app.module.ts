@@ -2,13 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';  //引入的双向绑定
 
-import { AppComponent } from './app.component';//引入的根组件
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component'; //引入的根组件
 // import { HeroesComponent } from './heroes/heroes.component';
 // import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 @NgModule({
-  declarations: [
+  declarations:[
     AppComponent,//当前项目运行的组件
     // HeroesComponent   
   ],  
