@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero'
 // import { HEROES } from '../mock'   以后使用服务来导入数据
 import { HeroService } from '../hero.service'
+
 import { Observable } from 'rxjs';
 import { HEROES } from '../mock';
 @Component({
@@ -12,19 +13,23 @@ import { HEROES } from '../mock';
 export class HeroesComponent implements OnInit {
   
    selectedHero: Hero;
+   //注入服务   声明了一个私有的  heroService 属性 将其标记为一个HeroService注入点
   constructor(private heroService: HeroService) { }
 
+//上面的类型为啥是个文件
   ngOnInit() {
       this.getHeroes()
   }
 
   heroes: Hero[];
+  //
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     console.log(this)
   }
+  //创建函数从服务中获取英雄的数据
   getHeroes(): void {
-    // this.heroes = this.heroService.getHeroes();
+    this.heroes = this.heroService.getHeroes();
     // console.log(this.heroService.getHeroes();)
   }
 }

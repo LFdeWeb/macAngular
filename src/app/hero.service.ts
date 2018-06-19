@@ -10,7 +10,8 @@ import { Observable, of } from 'rxjs';
 export class HeroService {
 
   constructor() { }
-  getHeroes(): Observable<Hero[]>{
-    return of(HEROES);
+  //添加getHeroes 方法 返回模拟的英雄列表
+  getHeroes(): Hero[]{
+    return HEROES;
   }
 }
