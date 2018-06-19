@@ -1,3 +1,16 @@
-<p>
+
   heroes works!
-</p>
+  <app-heroes-detail></app-heroes-detail> 
+  <div *ngFor='let  item of heroes'> 
+
+    {{item.id}} 
+    <br>
+    {{item.name|uppercase}}
+    <hr>
+    <div>
+      <label for="">
+        name: <input type="text" [(ngModel)]='item.name' placeholder="item.name"> 
+      </label>
+    </div>
+  </div>
+
