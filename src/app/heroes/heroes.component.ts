@@ -29,7 +29,14 @@ export class HeroesComponent implements OnInit {
   }
   //创建函数从服务中获取英雄的数据
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+       //将会返回可观察的数据 Observable是rxjs的一个关键类
+       //本节将会试用of函数模拟后台返回的数据
+    //this.heroes = this.heroService.getHeroes();
+    //由于heroservice中的函数返回值变为可观察的形式，因此这里也应该进行相应的改变
     // console.log(this.heroService.getHeroes();)
+ this.heroService.getHeroes()
+   .subscribe(heroes => this.heroes = heroes  )
   }
+   //此处使用了Observable.subscribe进行了异步
+
 }

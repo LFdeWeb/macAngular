@@ -11,7 +11,7 @@ export class HeroService {
 
   constructor() { }
   //添加getHeroes 方法 返回模拟的英雄列表
-  getHeroes(): Hero[]{
-    return HEROES;
+  getHeroes(): Observable<Hero[]>{
+    return of(HEROES);
   }
 }
