@@ -12,6 +12,7 @@ export class HeroService {
 
   constructor(private messageService: MessageService) { }
   //添加getHeroes 方法 返回模拟的英雄列表
+
   getHeroes(): Observable<Hero[]>{
     this.messageService.add('heroService: fetched heroes')
     return of(HEROES);
