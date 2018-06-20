@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';  //引入的双向绑定
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component'; //引入的根组件
 import { HeroesDetailComponent } from './heroes/heroes-detail/heroes-detail.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations:[
     AppComponent,//当前项目运行的组件
-  
-    HeroesDetailComponent,
+      MessageComponent,
+      HeroesDetailComponent,
       HeroesComponent
     // HeroesDetailComponent
   ],  
