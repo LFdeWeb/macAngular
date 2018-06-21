@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component'; //引入的根组件
 import { HeroesDetailComponent } from './heroes/heroes-detail/heroes-detail.component';
 import { MessageComponent } from './message/message.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { DashbordComponent } from './dashbord/dashbord.component';
+import { CrisisComponent } from './crisis/crisis.component';
 
 @NgModule({
   declarations:[
@@ -16,6 +17,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
       
       DashbordComponent,
       HeroesDetailComponent,
+      CrisisComponent,
       HeroesComponent
     // HeroesDetailComponent
   ],  

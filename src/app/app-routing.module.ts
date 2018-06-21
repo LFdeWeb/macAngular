@@ -4,13 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { HeroesDetailComponent } from './heroes/heroes-detail/heroes-detail.component';
+import { CrisisComponent } from './crisis/crisis.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dashbord', pathMatch: 'full'},
   { path: 'dashbord', component: DashbordComponent},
   { path: 'heroes', component: HeroesComponent},
   { path: 'detail/:id', component: HeroesDetailComponent},
+  { path: 'crisis', component: CrisisComponent, canActivate: [CrisisComponent] }
 
-  { path: '', redirectTo: '/dashbord', pathMatch: 'full'}
 ]
 
 @NgModule({
