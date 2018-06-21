@@ -12,7 +12,7 @@ import { HEROES } from '../mock';
 })
 export class HeroesComponent implements OnInit {
   
-   selectedHero: Hero;
+  //  selectedHero: Hero;
    //注入服务   声明了一个私有的  heroService 属性 将其标记为一个HeroService注入点
   constructor(private heroService: HeroService) { }
 
@@ -23,10 +23,10 @@ export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
   //
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    console.log(this)
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   console.log(this)
+  // }
   //创建函数从服务中获取英雄的数据
   getHeroes(): void {
        //将会返回可观察的数据 Observable是rxjs的一个关键类
